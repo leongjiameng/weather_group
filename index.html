@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pro Weather</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="./style.css" rel="stylesheet">
+    <script src="gauge.min.js"></script>
 
 
 </head>
@@ -27,25 +28,38 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col col-md-auto text-center iot-temperature-holder">
-                    <h3 id="greeting" style="font-size:calc(12px + 4vw)"><font face="garamond">Welcome to UTAR</font></h3>
-                    <h3 id="currentApiTemperature" style="font-size:calc(12px + 3vw)"><font face="garamond">IoT Temperature:</font></h3>
+                    <h3 id="greeting" style="font-size:calc(12px + 4vw)">
+                        <font face="garamond">Welcome to UTAR</font>
+                    </h3>
+                    <h3 id="currentApiTemperature" style="font-size:calc(12px + 3vw)">
+                        <font face="garamond">IoT Temperature:</font>
+                    </h3>
                 </div>
             </div>
-
+            <div class="row justify-content-md-center">
+                <div class="col col-md-auto text-center iot-temperature-holder">
+                    <canvas id="gauge1" class="justify-content-center" data-type="linear-gauge" data-width="160"
+                        data-height="600" data-border-radius="20" data-borders="0" data-bar-stroke-width="20"
+                        data-minor-ticks="10" data-major-ticks="0,10,20,30,40,50,60,70,80,90,100" data-value="22.3"
+                        data-units="°C" data-color-value-box-shadow="false"></canvas>
+                </div>
+            </div>
+            <h5 class="text-center" style="font-size:calc(12px + 3vw)">
+                <font face="garamond">Forecasted Weather</font>
+            </h5>
             <div id="temperaturerow" class="row justify-content-md-center">
                 <div class="col-md-2 text-center" id="pasttemperature">01/06: 30°</div>
                 <div class="col-md-2 text-center" id="pasttemperature">02/06: 29°</div>
                 <div class="col-md-2 text-center" id="pasttemperature">03/06: 32°</div>
                 <div class="col-md-2 text-center" id="pasttemperature">04/06: 29°</div>
                 <div class="col-md-2 text-center" id="pasttemperature">05/06: 30°</div>
-                <div class="col-md-2 text-center" id="pasttemperature">06/06: 30°</div>
             </div>
         </div>
     </div>
 
-
     <!--Javascript -->
     <script src="script.js" type="text/javascript"></script>
+
 </body>
 
 </html>
